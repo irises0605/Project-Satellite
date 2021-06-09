@@ -1,4 +1,4 @@
-# Satellite: Data Visualization Project in R
+# Satellite: Interactive Data Visualization Project in R
 ![satellite-data-visualization-in-R](https://images.idgesg.net/images/article/2019/07/cso_nw_global_network_distributed_decentralized_connections_by_nicoelnino_gettyimages-959876146_2400x1600-100801370-large.jpg)
 
 ## Overview
@@ -7,6 +7,9 @@ This application is an overview of all the current satellites orbiting the earth
 ## Data
 The data used in this project was collected by the Union of Concerned Scientists. This data set contains information about the 3,372 satellites currently orbiting Earth as of January 1, 2021. The raw data set can be found at [UCS Satellite Database](https://www.ucsusa.org/resources/satellite-database). We used a dataset compiled by the Union of Concerned Scientists that catalogs extensive data on the functional satellites currently orbiting Earth. There are 28 different variables categorized, and the dataset is updated three times a year. The last update was 12/31/2020. The dataset covers information about who built and uses each satellite, what the satellite is used for, when it was launched, how it was launched, and information about the orbit. We intended the graphs and data analysis to be very
 accessible to a curious amateur interested in learning a little more about satellites.
+
+## Documentation
+We documented detailed data visualization information explaining the purpose, interesting insight and UI for each page and graph.  The raw markdown and html files can be found [here](https://github.com/irises0605/Satellite/tree/main/documentation), and the rendered HTML preview can be found [here](https://htmlpreview.github.io/?https://github.com/irises0605/Satellite/blob/main/documentation/user-document.html). 
 
 ## Contributing
 
