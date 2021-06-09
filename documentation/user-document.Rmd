@@ -1,0 +1,381 @@
+---
+title: "Satellite Project User Document"
+author: "Tess White, Iris Liu, Meredith Spencer, Tahseen Rashid"
+output: 
+  html_document:
+    toc:  true
+    toc_float:  true
+    code_folding:  show
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction:
+
+For our project, we offer an introductory overview of the 3,372
+satellites currently orbiting the Earth. To create our app, we used a
+dataset compiled by the Union of Concerned Scientists that catalogs
+extensive data on the functional satellites currently orbiting Earth.
+There are 28 different variables categorized, and the dataset is updated
+three times a year. The last update was 1/01/2021. The dataset covers
+information about who built and uses each satellite, what the satellite
+is used for, when it was launched, how it was launched, and information
+about the orbit. We intended the graphs and data analysis to be very
+accessible to a curious amateur interested in learning a little more
+about satellites.
+
+
+
+[Dataset Link](https://www.ucsusa.org/resources/satellite-database#.VF_jIlPF8Wg)
+
+## Usage Examples:
+
+We will now walk through an example of using the app. Our app starts by
+giving the user an overview of the information about satellites included
+in the app to know what to expect when looking through the app. This
+page also provides information about finding the data set used in our
+project so that more curious users can find more information for
+themselves. We can then move onto the different tabs covered in our
+project.
+
+### "What Countries Have Satellites?" Tab 
+
+The only graph under this tab is a choropleth map showing the active satellite distribution worldwide since 1990. The cumulative number of operational satellites for each country is mapped to the corresponding country location on the map. Each country is colored according to the density distribution of the particular country.
+
+As of January 1, 2021, there are 3,172 active satellites actively
+orbiting Earth, and 5 of them are launched before 1990 by the United
+States and the United Kingdom. The United States has 1,878 operational
+satellites, the most significant number of any single country; their
+nearest competitor, China, has 412 satellites, with the earliest launch
+in 2000.
+
+The user can drag the slider below the map to change the year of the
+distribution. For example, the user would see the cumulative number of
+satellites per country in 2020. Dragging the slider would allow the user
+to modify 2020 into other desired years, with a step of 5. There is an
+animation button right below the slider if the user wants to quickly
+view the changes in active satellite distribution worldwide in the last
+three decades.
+
+### "Satellite Changes Over Time?" Tab 
+
+This tab includes three different subtabs: "Yearly Satellite Launches," "Expected Lifetime of
+Satellites," and "Mass of Satellites."
+
+The "Yearly Satellite Launches" tab shows the launching of the first
+satellite dated back to 1974 and the number of satellites launched each
+year since. The figure is interactive, and you can note the steady rise
+in the number of satellites launched over time. Mousing over the points shows the count and whether it is a SpaceX or non-SpaceX owner. However, in the past
+couple of years, there has been a significant increase in satellites due
+to SpaceX's efforts. You can see SpaceX's contribution to the total
+number of satellites launched in the last two years in the figure.
+
+The second tab, the "Expected Lifetime of Satellites," shows a
+scatterplot of the expected lifetime of the satellites versus the year
+of launch. From the plot, the user can see that the expected lifetime of
+satellites remained pretty consistently around ten years until 2015,
+when the predicted lifetime started to decrease quickly, as demonstrated
+by the trend line. By color-coding by the satellite purpose (which one
+can do by clicking the box "color code by satellite purpose?"), one can
+see that this recent overall decrease in expected lifetime likely comes
+from communication satellites, which had an increasing expected lifetime
+until their decline in recent years. During the years 2000-2019,
+communications satellites had the longest expected lifetimes of the
+different satellite purposes. This change in communication satellites'
+expected lifetimes is likely due to many communication satellites from
+SpaceX with small expected lifetimes. The following plot includes 296
+communication satellites launched in 2020 by SpaceX with an expected
+lifetime of 4 years, which has brought down the trend in the expected
+lifetime. Interestingly, as all the satellites in the data set are still
+currently in use, we see that many of the expected lifetime guesses were
+low estimates since we see many satellites launched in the 1990s and
+early 2000s with anticipated lifetimes anywhere from 1-20 years still in
+use. In addition, if the user creates separate graphs for each of the
+satellite purposes by clicking the "create separate graphs for each
+satellite purpose?" tab, one can examine the trends in the expected
+lifetime of satellites given their purpose more closely. For example,
+one can see that earth observation/science satellites have had a very
+consistent expected lifetime in the range of 2-12 years. Note that one
+can also see the satellite's name, the same expected lifetime, and the
+launch year of a specific point by hovering over it with their mouse.
+This way, you can see that the satellite with the greatest life
+expectancy of 30 years is, in fact, the International Space Station! In
+addition, note that you can also zoom in on specific subsets of the
+launch year or expected lifetime.
+
+In the third tab, "Mass of Satellites," one can see a scatter plot
+showing the mass of satellites over time. By selecting "launch mass" or
+"dry mass," the user can decide which mass trend to observe. Note that
+the launch mass of a satellite is the mass at the time of launch (with
+fuel), while the dry mass is the mass of the satellite during orbit
+(without fuel). For launch mass, one can see that the launch mass of
+satellites remained constant around 3,000kg until about 2005, where it
+started to decrease slowly. This again could be due to SpaceX
+satellites, as the following plot has 902 SpaceX satellites with very
+light launch masses between 227-260kg launched in the last two years,
+which has likely caused the decrease in the launch mass trend. Note that
+again one can see the satellite's name, the expected lifetime, and the
+launch year of a specific point by hovering over it with their mouse. In
+addition, you can also zoom in on particular subsets of the launch year
+or mass. By creating separate graphs for each satellite purpose, space
+observation/science satellites have decreased since 1990 because of a
+hefty satellite launched in 1997 with a launch mass of 11,110kg. This
+was the Hubble Space Telescope! For dry mass, one can see that dry mass
+has been decreasing reasonably quickly since 2010. When you color code
+by satellite purpose, one sees that east observation/science satellites
+have experienced an increase in dry mass since 2015, while space
+observation/science, navigation/technology, and communication satellites
+have all had decreasing dry masses. When one creates separate graphs by
+satellite purpose and can view each trend more closely, one sees that
+this could be due to outliers launched in 2005, 2011, 2013, and 2019
+with dry masses of 10,000kg. These satellites were Keyhole Satellites 5,
+6, 7, and 8, respectively launched by the United States.
+
+### "What are some Orbit Properties?" Tab 
+
+This tab includes two different subtabs: "Satellite Orbit Period" and "Satellite Apogee and
+Perigee."
+
+In the "Satellite Orbit Period" tab, one can see information about the
+satellite's orbit period. The period of a satellite refers to the time
+it takes to make one complete orbit around the Earth. The dataset
+included the period for each satellite. So we used the number of minutes
+in a day to calculate the number of times each satellite orbits the
+Earth in one day to determine the type of satellite it may be. Most
+satellites can do it within 96 minutes- these satellites are usually
+known as sun-synchronous orbit or in polar orbit. The first figure shows
+the distribution of each of these satellites over time together;
+however, we can facet to see each of the types' distributions
+individually. Faceting is done by clicking the option 'Create separate
+graphs for each satellite period?'. If you do so, we see that the number
+of sun-synchronous satellites (12-16 rotations per day) has increased
+significantly in recent years.
+
+The second tab, "Satellite Apogee and Perigee," is a scatterplot that
+has apogee on the x-axis, perigee on the y-axis, and the eccentricity as
+the size of the point. All three of these variables measure different
+aspects of the satellite's orbit. The apogee is the part of the orbit
+where it is furthest away from the Earth, and the perigee is the part of
+the orbit where it is closest to the Earth. The eccentricity measures
+how ellipsoidal or spherical the orbit is, with a value closer to 1
+being a more ellipsoidal orbit and a value closer to 0 being a more
+spherical one. Mousing over the points will show the apogee and perigee
+of each satellite. As the apogee increases, the eccentricity also
+increases, because if the satellite orbit is more ellipsoidal rather
+than spherical, there will be a point in the orbit where the apogee is
+quite large. There is a portion of the graph where there is a linear
+relationship between satellites with low eccentricities. This is the
+subset of satellites with a spherical orbit, so the apogee and perigee
+will be the same. This graph helps to demonstrate how there are so many
+satellites in orbit around the Earth, but none of them hit one another
+due to their different orbit shapes and distances. The plot below this
+one does not have any interactive features, but it adds the purpose of
+the satellite being mapped to color to highlight how what the satellite
+is used for will determine what the orbit is.
+
+### "Who uses the Satellites?" Tab
+
+The interactive proportional bar chart in this tab shows different
+satellite users by country. The users are categorized into four main
+user types, Civil, Commercial, Government, and Military, based on the
+primary user type declared by each satellite operator. 63% of all active
+satellites orbiting Earth are operated by commercial users, 17% by
+government users, 15% by military users, and 5% by civil users. This
+result is significantly impacted by the satellite users in the United
+States since it has more than 50% of the world's active satellites.
+Holistically developed and technologically advanced countries like some
+countries in North America, Europe, Oceania, and East Asia use satellites for commercial purposes. Developing
+and under-developed countries, in general, are more geared toward civil,
+government, and military use since they might only have a few satellites
+currently in space. For example, none of the satellites launched by
+Vietnam and South Africa are operated by commercial users. The user can
+check whether a country is an independent satellite-launching country
+using the search bar, and adding/dropping countries will correspondingly
+add/drop the bar for that country. Shared launches are labeled as
+"Multinational."
+
+### "What are Satellites used for?" Tab
+
+The interactive proportional bar chart in this tab allows users to
+search for individual countries to see how each country uses satellites.
+The results are presented as a proportion that can be compared to the
+global distribution of satellite use. We divided satellite uses into
+communication, earth observation/science, space observation/science,
+navigation/technology, surveillance, and others. Some satellites are
+owned by multiple countries, shown as a list of countries with slashes
+in between. Similar to the previous graph, countries can be added and
+removed by using the search bar. The global bar will always stay up as a
+point of comparison.
+
+## Design Choices:
+
+We will now discuss the design choices made in each of our graphs in our
+app.
+
+### Cumulative Number of Active Satellites Per Country Map
+
+We implemented a choropleth map to show active satellite distribution
+per country since we aimed to present satellite density for geographical
+areas and regions. Other possible options could be: 1) bubble plot on
+map, but colors of the same hue are more straightforward to compare than
+the size of the bubble, and a bubble plot may easily fall into the trap
+of overplotting considering geographical regions like Europe; 2) bar
+chart, but we would lose all the geographical information, and there
+would be too many bars since more than 60 countries have satellites. The
+Choropleth map is also very advantageous if looking at the same country
+across different years. For example, China had no satellite in 1990
+while accounting for an increasing proportion of total satellite since
+2000, so the color changes from light blue to dark blue. Launch year is
+the interactive variable in the plot since changing the launch year
+allows the users to know both the country and the corresponding launched
+active satellite number by the year.
+
+### Satellites Launched per Year Histogram
+
+As we used a time scale, we decided a histogram would be the easiest to
+infer and process. Other options included using a line plot. However,
+since we wanted to use a stacked bar chart to highlight SpaceX satellites
+in recent years, we decided against that. The combination of including
+the SpaceX stacked element and the easiest way to display a timeline
+progression led us to choose a histogram.
+
+### Expected Lifetime of Satellites Over Time Scatterplot
+
+We sought to demonstrate how the technology of satellites has changed
+over time. One such way to explain this was to examine how the expected
+lifetime of satellites has changed over time. To do this, we found it
+best to use a scatterplot with the launch year on the x-axis and the
+expected lifetime on the y-axis. This way, users could see if there was
+a relationship between the expected lifetime and launch year. However,
+we ran into having many points overlaid because our data set contained
+many satellites. To help with this, we used a slight horizontal jitter
+to offset the points slightly and used a relatively small alpha value so
+the transparency of the points would help tell the user how many points
+were plotted in that area.
+
+Even after addressing overfitting, it wasn't easy to see the trends in
+the data because there were so many points around the same places. Thus,
+we decided to include a trend line with a 95% confidence band to
+demonstrate the trend in the data. The confidence band helps the viewer
+see how well the trend line fits the data. We chose to use a non-linear
+trend line rather than a linear trend line to allow for different trends
+in different launch years. In order to help with the fact, there were
+many points plotted on the graph, we used Plotly to enable the user to
+zoom in and out on certain sections of the chart, as well as hover over
+points to gain information about specific points, including the
+satellite name. That way, people can see if they recognize any of the
+satellites and gain more information about any exciting points they see.
+
+Users can also color code the data points by satellite purpose, making
+different trend lines for other satellite purposes. With the
+scatterplot, one can compare the different trends given the satellite
+purpose (so, for example, see the difference in the expected lifetime
+trend for communication satellites versus earth observation/science
+satellites). When color-coding, we were sure to use the same colors as
+other plots that also used the satellite purpose variable, so we were
+consistent throughout the app. We also allowed the option to facet by
+satellite purpose or make separate graphs for each satellite purpose.
+This allowed people to more closely analyze the satellite trends for the
+expected lifetime for each of the satellite purposes without having the
+other data points obstructing the trend.
+
+### Mass of Satellites Over Time Scatterplot
+
+When thinking about how the technology of satellites has changed over
+time, we found another way to answer this question was to show how the
+launch mass and dry mass of satellites have changed over time. Because
+launch mass and dry mass are very similar, we wanted to create the same
+plot for both launch mass and dry mass and have the user switch between
+them easily. We decided that a scatterplot would again be the best
+choice to show the relationship between mass and launch. Because we were
+again looking at a numerical variable versus launch year, we essentially
+recreated the "Expected Lifetime of Satellites Over Time" scatterplot.
+This way, we could keep the layout and interactive elements consistent
+in both tabs so that users would already be familiar with the layout and
+interactive elements. We thus made the same design choices as we did in
+the Expected Lifetime of Satellites Over Time scatterplot, including
+using jitter and transparency to help with the problem of overlaying
+points, a trend line to help demonstrate the trend in the data, color
+coding points by satellite purpose in the full graph so that users can
+compare different trends, and allowing users to facet by satellite
+purpose so they can examine the individual trends as well. In addition,
+we again used the Plotly feature to allow users to see the name of the
+satellite, the launch year, and the exact mass so they can gain more
+information about interesting points they see.
+
+### Density Plot of Satellite Rotations Per Day
+
+In this case, since there were satellites of varying rotations per day,
+we thought first of creating categorical variables. Using a density plot
+would be the ideal choice to show the change in the distributions over
+time. Our other options were using a combination of bar charts,
+scatterplots, etc. However, these options did not show the difference in
+the distributions over time as neatly as trying them, so we went with the
+density plot. The choice to facet by satellite rotation number was made
+so that the change in density for each type could easily be tracked. The
+facet wrap provided a visually pleasing solution.
+
+### Satellite Apogee and Perigee Scatterplot
+
+This scatterplot was made using the HTML widget package
+"metricsgraphics" using the point function. This was a simple way to
+make a graph that looks very streamlined and allows points to be moused
+over. Additionally, a scatterplot was the best choice to see the
+relationship between the numeric variables of apogee and perigee.
+Because of the definition of apogee and perigee, there will be a natural
+relationship between the two, so plotting them against each other made
+the most sense. Eccentricity could then be plotted to point size and
+color, which clearly demonstrates the points with a similar
+relationship. We liked how it was possible to see different trends
+between satellites with very small eccentricities compared to those with
+larger eccentricities. It would not make sense to have one trend line
+for this data set, as there is more than one trend happening.
+
+### Second Apogee and Perigee Scatterplot
+
+This graph is the same as the previous, with the addition of the
+satellite's purpose being mapped to eccentricity. There are many
+variables being mapped to different things in this graph, so we thought
+it would be good to include this in addition to the previous graph
+rather than as a standalone. It was interesting to have the purpose with
+the information about how what a satellite is being designed to do
+impacts how it is set into orbit.
+
+### Different Satellite Use by Country Proportional Bar Chart
+
+We chose a proportional bar chart to show the proportions of different
+users by country instead of a standard bar chart considering that the
+satellite distribution by country in raw number is highly skewed. A
+potential such as the United States would make bars representing other
+countries unreadable. When entering the page, the user would see the
+United States, China, Russia, and the United Kingdom as the selected
+countries since they are the top 4 satellite owners/operators. The
+interactive search bar allows users to easily compare between countries
+to see different user types by proportions. There is always a Global
+column so that the user can have a sense of the satellite use of
+selected countries compared to the global use of satellites.
+
+### Different Satellite Purpose by Country Proportional Bar Chart
+
+The categories chosen for this bar chart were simplified down from the
+original dataset into six distinct categories. The vast majority of
+satellites are classified as communication, earth observation/science,
+space observation/science, navigation/technology, with only 12
+satellites classified into either surveillance or other. We decided that
+surveillance was an interesting enough category to pull it out
+individually. The other was just a catch-all for the remaining
+satellites that could not be classified. The color scheme of the bars
+matches the color scheme for satellites in the expected lifetimes of
+satellites over time graph. A proportional bar chart allowed for easy
+comparisons between countries to see how they used their satellites in
+different ways without worrying about other sized bars.
+
+## Acknowledgments:
+
+We want to thank Professor Jerzy Wieczorek for all of his help and
+feedback throughout this semester. We all had an excellent time taking
+this course! We would also like to thank the Union of Concerned
+Scientists for compiling this superb dataset and raising awareness about
+important issues.
