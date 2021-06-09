@@ -42,7 +42,11 @@ project.
 
 ### "What Countries Have Satellites?" Tab 
 
-The only graph under this tab is a choropleth map showing the active satellite distribution worldwide since 1990. The cumulative number of operational satellites for each country is mapped to the corresponding country location on the map. Each country is colored according to the density distribution of the particular country.
+The only graph under this tab is a choropleth map showing the active 
+satellite distribution worldwide since 1990. The cumulative number of 
+operational satellites for each country is mapped to the corresponding 
+country location on the map. Each country is colored according to the 
+density distribution of the particular country.
 
 As of January 1, 2021, there are 3,172 active satellites actively
 orbiting Earth, and 5 of them are launched before 1990 by the United
@@ -67,7 +71,8 @@ Satellites," and "Mass of Satellites."
 The "Yearly Satellite Launches" tab shows the launching of the first
 satellite dated back to 1974 and the number of satellites launched each
 year since. The figure is interactive, and you can note the steady rise
-in the number of satellites launched over time. Mousing over the points shows the count and whether it is a SpaceX or non-SpaceX owner. However, in the past
+in the number of satellites launched over time. Mousing over the points 
+shows the count and whether it is a SpaceX or non-SpaceX owner. However, in the past
 couple of years, there has been a significant increase in satellites due
 to SpaceX's efforts. You can see SpaceX's contribution to the total
 number of satellites launched in the last two years in the figure.
@@ -135,8 +140,8 @@ with dry masses of 10,000kg. These satellites were Keyhole Satellites 5,
 
 ### "What are some Orbit Properties?" Tab 
 
-This tab includes two different subtabs: "Satellite Orbit Period" and "Satellite Apogee and
-Perigee."
+This tab includes two different subtabs: "Satellite Orbit Period" and 
+"Satellite Apogee and Perigee."
 
 In the "Satellite Orbit Period" tab, one can see information about the
 satellite's orbit period. The period of a satellite refers to the time
@@ -186,12 +191,12 @@ government users, 15% by military users, and 5% by civil users. This
 result is significantly impacted by the satellite users in the United
 States since it has more than 50% of the world's active satellites.
 Holistically developed and technologically advanced countries like some
-countries in North America, Europe, Oceania, and East Asia use satellites for commercial purposes. Developing
-and under-developed countries, in general, are more geared toward civil,
-government, and military use since they might only have a few satellites
-currently in space. For example, none of the satellites launched by
-Vietnam and South Africa are operated by commercial users. The user can
-check whether a country is an independent satellite-launching country
+countries in North America, Europe, Oceania, and East Asia use satellites for 
+commercial purposes. Developing and under-developed countries, in general, are
+more geared toward civil, government, and military use since they might 
+only have a few satellites currently in space. For example, none of the 
+satellites launched by Vietnam and South Africa are operated by commercial users. 
+The user can check whether a country is an independent satellite-launching country
 using the search bar, and adding/dropping countries will correspondingly
 add/drop the bar for that country. Shared launches are labeled as
 "Multinational."
