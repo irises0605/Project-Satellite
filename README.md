@@ -1,4 +1,4 @@
-# Project Satellite: Interactive Data Visualization in R with Shiny
+# Project Satellite: Interactive Data Viz in R with Shiny
 ![satellite-data-visualization-in-R](https://images.idgesg.net/images/article/2019/07/cso_nw_global_network_distributed_decentralized_connections_by_nicoelnino_gettyimages-959876146_2400x1600-100801370-large.jpg)
 
 ## Overview
