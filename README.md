@@ -8,6 +8,9 @@ This application is an overview of all the current satellites orbiting the earth
 The data used in this project was collected by the Union of Concerned Scientists. This data set contains information about the 3,372 satellites currently orbiting Earth as of January 1, 2021. The raw data set can be found at [UCS Satellite Database](https://www.ucsusa.org/resources/satellite-database). We used a dataset compiled by the Union of Concerned Scientists that catalogs extensive data on the functional satellites currently orbiting Earth. There are 28 different variables categorized, and the dataset is updated three times a year. The last update was 12/31/2020. The dataset covers information about who built and uses each satellite, what the satellite is used for, when it was launched, how it was launched, and information about the orbit. We intended the graphs and data analysis to be very
 accessible to a curious amateur interested in learning a little more about satellites.
 
+## Deployed Application
+[The deployed application](https://irises0605.shinyapps.io/satellite-2021/) is currently hosted on [Shinyapps.io](https://shiny.rstudio.com/deploy/) by R Studio
+
 ## Documentation
 We documented detailed data visualization information explaining the purpose, interesting insight and UI for each page and graph.  The raw markdown and html files can be found [here](https://github.com/irises0605/Satellite/tree/main/documentation), and the rendered HTML preview can be found [here](https://htmlpreview.github.io/?https://github.com/irises0605/Satellite/blob/main/documentation/user-document.html). 
 
